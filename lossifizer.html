@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ko"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;JPEG DCT Text Lossifizer (Hangul)&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f0f0f0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: black;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Sitka Small', 'Georgia', 'Arial', 'Helvetica';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 120%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>textarea {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 90%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 20ex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 120%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slider {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 1ex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 90%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 2ex;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slider::-webkit-slider-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #90f0c0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 0.5ex solid #50c0a0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 25%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 4ex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 4ex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.spos {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: steelblue;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.ckbox {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 0.5ex solid gray;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 4ex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 4ex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f0f0f0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 25%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(1.5ex);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.ckbox:checked {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #90f0c0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #50c0a0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body onload="recalculate()"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h1&gt;JPEG DCT Text Lossifizer (Hangul)&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">&lt;b&gt;Step 1:&lt;/b&gt; 텍스트를 입력하세요:</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">&lt;textarea id="in" oninput="recalculate()"&gt;</p>
+<p class="p1">한글을 여기에 입력하세요.</p>
+<p class="p1">&lt;/textarea&gt;</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">&lt;b&gt;Step 2:&lt;/b&gt; 슬라이더를 조정하세요:</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">&lt;input type="range" min="0" max="1000" value="0" id="div" class="slider" oninput="recalculate()"&gt;</p>
+<p class="p1">&lt;br&gt;</p>
+<p class="p1">&lt;span id="slider_pos" class="spos"&gt;0&lt;/span&gt;</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">&lt;b&gt;Step 3:&lt;/b&gt; 결과 출력:</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">&lt;textarea id="out" readonly&gt;&lt;/textarea&gt;</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function recalculate() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var in_text = document.getElementById('in').value,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>in_len = in_text.length,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>shoddiness = document.getElementById('div').value / 10;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// UTF-8 인코딩을 위한 버퍼 생성</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var in_buf = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (var i = 0; i &lt; in_len; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>in_buf.push(in_text.charCodeAt(i));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>var dct_result = dct(in_buf, in_len);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('slider_pos').innerText = shoddiness;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>dct_result = quantize(dct_result, in_len, shoddiness);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var idct_result = idct(dct_result, in_len);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 복원 후 UTF-8 변환</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var out_text = String.fromCharCode.apply(null, idct_result);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('out').value = out_text;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function dct(in_buf, len) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var result = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (var f_bkt = 0; f_bkt &lt; len; f_bkt++) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var sum = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (var sample_no = 0; sample_no &lt; len; sample_no++)</p>
+<p class="p1"><span class="Apple-converted-space">                </span>sum += in_buf[sample_no] * Math.cos(Math.PI * f_bkt * (sample_no + 0.5) / len);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>result[f_bkt] = sum;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return result;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function idct(in_buf, len) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var result = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (var sample_no = 0; sample_no &lt; len; sample_no++) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var sum = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (var f_bkt = 0; f_bkt &lt; len; f_bkt++)</p>
+<p class="p1"><span class="Apple-converted-space">                </span>sum += in_buf[f_bkt] * Math.cos(Math.PI * f_bkt * (sample_no + 0.5) / len) * (f_bkt ? 2 : 1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>result[sample_no] = Math.round(sum / len);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return result;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function quantize(dct_buf, len, shoddiness) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var result = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>result[0] = dct_buf[0];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (i = 1; i &lt; len; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var use_div = 1 + shoddiness * (len - i) / len;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>result[i] = Math.round(dct_buf[i] / use_div) * use_div;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return result;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
